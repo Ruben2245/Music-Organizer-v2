@@ -94,4 +94,14 @@ public class MusicOrganizer
             listado++;
         }
     }
+    
+    public int findFirst(String searchString){
+        int index = 0;
+        while(index < files.size()) {
+            if( files.get(index).contains(searchString)){
+                return index;
+            }
+        }
+        return -1;
+    }
 }
